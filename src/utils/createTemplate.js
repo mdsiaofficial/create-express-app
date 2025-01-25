@@ -2,8 +2,6 @@ import fs from "fs-extra";
 import path from "path";
 
 export const createJavaScriptTemplate = (baseDir) => {
-  const templatePath = path.join(baseDir, "templates/javascript");
-
   const structure = [
     {
       file: "src/routes/index.js",
@@ -86,10 +84,10 @@ app.listen(PORT, () => {
   ];
 
   structure.forEach(({ file, content }) => {
-    const fullPath = path.join(templatePath, file);
+    const fullPath = path.join(baseDir, file);
     fs.ensureFileSync(fullPath);
     fs.writeFileSync(fullPath, content, "utf8");
   });
 
-  console.log(`JavaScript template created at ${templatePath}`);
+  console.log(`JavaScript template created at ${baseDir}`);
 };
