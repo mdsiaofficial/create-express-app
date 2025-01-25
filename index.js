@@ -3,7 +3,7 @@ import chalk from "chalk";
 import fs from "fs-extra";
 import path from "path";
 import { fileURLToPath } from "url";
-import { createJavaScriptTemplate } from "./src/utils/createTemplate";
+import { createJavaScriptTemplate } from "./src/utils/createTemplate.js";
 
 // Use fileURLToPath for `__dirname` equivalent in ES Modules
 const __filename = fileURLToPath(import.meta.url);
