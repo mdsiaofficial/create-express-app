@@ -1,9 +1,15 @@
-const inquirer = require("inquirer");
-const chalk = require("chalk");
-const fs = require("fs-extra");
-const path = require("path");
+import inquirer from "inquirer";
+import chalk from "chalk";
+import fs from "fs-extra";
+import path from "path";
+import { fileURLToPath } from "url";
+import { createJavaScriptTemplate } from "./src/utils/createTemplate";
 
-async function run(projectName) {
+// Use fileURLToPath for `__dirname` equivalent in ES Modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export async function run(projectName) {
   const isCurrentDir = projectName === ".";
   const targetDir = isCurrentDir
     ? process.cwd()
@@ -23,16 +29,16 @@ async function run(projectName) {
     },
   ]);
 
-  const templateDir = path.join(__dirname, "templates", language.toLowerCase());
-  console.log(chalk.green(`Creating a ${language} project...`));
-
-  if (!isCurrentDir) fs.mkdirSync(targetDir);
-  fs.copySync(templateDir, targetDir);
+  if (language === "JavaScript") {
+    createJavaScriptTemplate(targetDir);
+  } else {
+    console.log(
+      chalk.yellow("TypeScript template creation is not implemented yet.")
+    );
+  }
 
   console.log(chalk.green(`Project created at ${targetDir}`));
   console.log(chalk.blue(`cd ${projectName}`));
   console.log(chalk.blue("npm install"));
   console.log(chalk.blue("npm run dev"));
 }
-
-module.exports = { run };
