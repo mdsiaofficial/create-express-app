@@ -9,7 +9,7 @@
 ### Using `npm`
 
 ```bash
-npx create-ex-app
+npx create-ex-app my-app
 ```
 
 Install the package globally:
