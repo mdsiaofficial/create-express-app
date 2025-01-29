@@ -12,7 +12,8 @@
   },
   "scripts": {
     "test": "node ./bin/create-express-app.js .",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
@@ -38,7 +39,8 @@
     "inquirer": "^8.2.4"
   },
   "devDependencies": {
+    "eslint": "^8.51.0",
     "nodemon": "^3.1.9",
-    "eslint": "^8.51.0"
+    "prettier": "3.4.2"
   }
 }
