@@ -4,7 +4,7 @@ import { program } from "commander";
 import { run } from "../index.js";
 
 program
-  .name("run-express-app")
+  .name("create-ex-app")
   .description(
     "CLI to generate Express.js projects in JavaScript or TypeScript"
   )
