@@ -39,7 +39,7 @@ export async function run(projectName) {
             choices: [
                 { name: 'NoSQL (MongoDB with Mongoose)', value: 'mongoose' },
                 {
-                    name: 'SQL (PostgreSQL with Sequelize/TypeORM)',
+                    name: 'SQL (PostgreSQL or MySQL with Sequelize/TypeORM)',
                     value: 'sql',
                 },
                 { name: 'No database', value: 'none' },
@@ -91,13 +91,13 @@ export async function run(projectName) {
         console.log(chalk.green.bold(`\nProject Setup Complete! 🎉\n`));
 
         console.log(chalk.yellowBright(`Next Steps:`));
-        console.log(chalk.blue(`1. Navigate to your project folder:`));
+        console.log(chalk.blue(`Navigate to your project folder:`));
         console.log(chalk.cyan(`   cd ${isCurrentDir ? '.' : projectName}`));
 
-        console.log(chalk.blue(`2. Install dependencies:`));
+        console.log(chalk.blue(`Install dependencies:`));
         console.log(chalk.cyan(`   npm install`));
 
-        console.log(chalk.blue(`3. Start the development server:`));
+        console.log(chalk.blue(`Start the development server:`));
         console.log(chalk.cyan(`   npm run dev\n`));
 
         console.log(chalk.magenta.bold(`Happy Coding! 🚀`));
