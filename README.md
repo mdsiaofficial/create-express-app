@@ -30,25 +30,6 @@ To scaffold a new Express.js project, run:
 npx create-ex-app  my-app
 ```
 
-This will create a directory `my-app` with the following structure:
-
-```
-my-app/
-├── src/
-│   ├── routes/
-│   │   └── index.js
-│   ├── controllers/
-│   │   └── indexController.js
-│   ├── middlewares/
-│   │   └── logger.js
-│   ├── models/
-│   │   └── exampleModel.js
-│   └── app.js
-├── .gitignore
-├── package.json
-└── app.js
-```
-
 ### Start the Application
 
 Navigate to the newly created project directory and install dependencies:
@@ -88,13 +69,25 @@ npx create-ex-app --help
 
 ---
 
-<!-- ## Features -->
+## 📌 Features
 
-<!-- - **Quick Setup**: Generate a fully functional Express.js application in seconds.
-- **Customizable Templates**: Includes pre-built templates for JavaScript applications.
-- **Middleware & Controllers**: Pre-configured structure with examples of middleware, controllers, and routes.
+- **Quick Setup**: Generate a fully functional Express.js application in seconds.
+- **Customizable Templates**: Includes pre-built templates for JavaScript and TypeScript applications.
 - **Extensible**: Add your own templates or modify the existing ones.
-- **Command-Line Simplicity**: Easy-to-use CLI commands. -->
+- **Command-Line Simplicity**: Easy-to-use CLI commands.
+- Integrates popular ORMs/ORMs like Mongoose, Sequelize, and TypeORM.
+- Preconfigured project structures for best practices.
+
+## 📦 Available Templates
+
+| Template Name          | Language   | Database/ORM       |
+| ---------------------- | ---------- | ------------------ |
+| `javascript`           | JavaScript | None               |
+| `typescript`           | TypeScript | None               |
+| `javascript-mongoose`  | JavaScript | MongoDB (Mongoose) |
+| `typescript-mongoose`  | TypeScript | MongoDB (Mongoose) |
+| `javascript-sequelize` | JavaScript | SQL (Sequelize)    |
+| `typescript-typeorm`   | TypeScript | SQL (TypeORM)      |
 
 ## Contributing
 
