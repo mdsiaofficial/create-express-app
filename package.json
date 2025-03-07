@@ -1,48 +1,49 @@
 {
-  "name": "create-ex-app",
-  "version": "1.1.7",
-  "description": "CLI tool to generate Express.js projects",
-  "type": "module",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
-  "bin": {
-    "run-express-app": "./bin/create-express-app.js"
-  },
-  "scripts": {
-    "test": "node ./bin/create-express-app.js .",
-    "lint": "eslint .",
-    "format": "prettier . --write "
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GausAlMunirTushar/create-express-app.git"
-  },
-  "keywords": [
-    "Express",
-    "App",
-    "CLI",
-    "Node.js"
-  ],
-  "author": "Gaus Al Munir Tushar",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/GausAlMunirTushar/create-express-app/issues"
-  },
-  "homepage": "https://github.com/GausAlMunirTushar/create-express-app#readme",
-  "dependencies": {
-    "chalk": "^5.0.0",
-    "commander": "^10.0.0",
-    "express": "^4.21.2",
-    "fs-extra": "^11.0.0",
-    "inquirer": "^8.2.4"
-  },
-  "devDependencies": {
-    "@eslint/js": "^8.57.1",
-    "eslint": "^8.57.1",
-    "globals": "^15.14.0",
-    "nodemon": "^3.1.9",
-    "prettier": "3.4.2"
-  }
+	"name": "create-ex-app",
+	"version": "1.1.7",
+	"description": "CLI tool to generate Express.js projects",
+	"type": "module",
+	"main": "index.js",
+	"directories": {
+		"doc": "docs"
+	},
+	"bin": {
+		"create-ex-app": "./bin/create-express-app.js"
+	},
+	"scripts": {
+		"test": "node ./bin/create-express-app.js .",
+		"lint": "eslint .",
+		"format": "prettier . --write "
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/GausAlMunirTushar/create-express-app.git"
+	},
+	"keywords": [
+		"Express",
+		"App",
+		"CLI",
+		"Node.js"
+	],
+	"author": "Gaus Al Munir Tushar",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/GausAlMunirTushar/create-express-app/issues"
+	},
+	"homepage": "https://github.com/GausAlMunirTushar/create-express-app#readme",
+	"dependencies": {
+		"chalk": "^5.0.0",
+		"commander": "^10.0.0",
+		"express": "^4.21.2",
+		"fs-extra": "^11.0.0",
+		"inquirer": "^8.2.4"
+	},
+	"devDependencies": {
+		"@eslint/js": "^8.57.1",
+		"eslint": "^8.57.1",
+		"globals": "^15.14.0",
+		"nodemon": "^3.1.9",
+		"prettier": "3.4.2",
+		"ts-node": "^10.9.2"
+	}
 }
