@@ -13,7 +13,7 @@ app.use(express.json());
 
 // Health Check
 app.get('/health', (_req, res) => {
-  res.json({ message: 'Server is running' });
+	res.json({ message: 'Server is running' });
 });
 
 // Routes

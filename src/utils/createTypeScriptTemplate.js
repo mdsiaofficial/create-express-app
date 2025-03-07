@@ -1,7 +1,7 @@
 const projectStructure = {
-  src: {
-    app: {
-      "app.ts": `
+	src: {
+		app: {
+			'app.ts': `
   import express from "express";
   import { router } from "../routes/index";
   import { errorHandler } from "../middlewares/errorHandler";
@@ -19,15 +19,15 @@ const projectStructure = {
   
   export default app;
         `,
-    },
-    config: {
-      "config.ts": `
+		},
+		config: {
+			'config.ts': `
   export const config = {
     port: process.env.PORT || 3000,
     dbUrl: process.env.DB_URL || "mongodb://localhost:27017/example",
   };
         `,
-      "database.ts": `
+			'database.ts': `
   import mongoose from "mongoose";
   import { config } from "./config";
   
@@ -41,21 +41,21 @@ const projectStructure = {
     }
   };
         `,
-    },
-    constants: {
-      ".gitkeep": "",
-    },
-    controllers: {
-      "index.ts": `
+		},
+		constants: {
+			'.gitkeep': '',
+		},
+		controllers: {
+			'index.ts': `
   import { Request, Response } from "express";
   
   export const homeController = (req: Request, res: Response): void => {
     res.send("Welcome to your Express.js TypeScript app!");
   };
         `,
-    },
-    middlewares: {
-      "errorHandler.ts": `
+		},
+		middlewares: {
+			'errorHandler.ts': `
   import { Request, Response, NextFunction } from "express";
   
   export const errorHandler = (
@@ -68,9 +68,9 @@ const projectStructure = {
     res.status(500).json({ error: "Something went wrong!" });
   };
         `,
-    },
-    routes: {
-      "index.ts": `
+		},
+		routes: {
+			'index.ts': `
   import express from "express";
   import { homeController } from "../controllers/index";
   
@@ -78,14 +78,14 @@ const projectStructure = {
   
   router.get("/", homeController);
         `,
-    },
-  },
-  ".gitignore": `
+		},
+	},
+	'.gitignore': `
   node_modules
   .env
   dist
     `,
-  "package.json": `
+	'package.json': `
   {
     "name": "express-typescript-app",
     "version": "1.0.0",
@@ -107,7 +107,7 @@ const projectStructure = {
     }
   }
     `,
-  "tsconfig.json": `
+	'tsconfig.json': `
   {
     "compilerOptions": {
       "target": "ES6",
