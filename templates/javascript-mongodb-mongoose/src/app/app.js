@@ -5,7 +5,7 @@ import compression from 'compression';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 import routes from '../routes/index.js';
-import { errorHandler } from '../middlewares/errorHandler.js';
+import errorHandler from '../middlewares/errorHandler.js';
 import logger from '../utils/logger.js';
 
 dotenv.config();
