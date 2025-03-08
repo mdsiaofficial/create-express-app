@@ -115,7 +115,7 @@ npm install
 Run tests:
 
 ```bash
-npm test
+npm run test
 ```
 
 ---
