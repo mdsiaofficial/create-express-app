@@ -107,6 +107,33 @@ export async function run(projectName) {
 			execSync('git init', { cwd: targetDir, stdio: 'inherit' });
 			console.log(chalk.green('✅ Git repository initialized.\n'));
 		}
+		// Step 6: Add .gitignore if it doesn't exist
+		const gitignorePath = path.join(targetDir, '.gitignore');
+		if (!fs.existsSync(gitignorePath)) {
+			// Content to add to the .gitignore file
+			const gitignoreContent = `
+				# Node modules
+				node_modules/
+				
+				# Logs
+				logs/
+				*.log
+				npm-debug.log*
+				
+				# .env files
+				.env
+				.env.local
+				.env.development.local
+				.env.test.local
+				.env.production.local
+				
+				# OS files
+				.DS_Store
+				Thumbs.db
+				`;
+
+			fs.writeFileSync(gitignorePath, gitignoreContent.trim());
+		}
 
 		// Display next steps
 		console.log(chalk.green.bold(`🎉 Project Setup Complete!`));

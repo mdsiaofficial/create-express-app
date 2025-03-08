@@ -5,7 +5,8 @@
 	"type": "module",
 	"files": [
 		"*",
-		".gitignore"
+		".gitignore",
+		"templates/*"
 	],
 	"main": "index.js",
 	"directories": {
