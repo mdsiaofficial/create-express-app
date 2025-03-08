@@ -10,14 +10,15 @@ const connectDatabase = async (): Promise<void> => {
 			);
 		}
 
-		await mongoose.connect(mongoUri, {
-			useNewUrlParser: true,
-			useUnifiedTopology: true,
-		});
+		await mongoose.connect(mongoUri);
 
 		console.log('MongoDB Connected');
-	} catch (error) {
-		console.error('Database connection failed:', error.message);
+	} catch (error: unknown) {
+		if (error instanceof Error) {
+			console.error('Database connection failed:', error.message);
+		} else {
+			console.error('Unknown error occurred during database connection');
+		}
 		process.exit(1);
 	}
 };

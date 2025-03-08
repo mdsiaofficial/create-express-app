@@ -112,25 +112,24 @@ export async function run(projectName) {
 		if (!fs.existsSync(gitignorePath)) {
 			// Content to add to the .gitignore file
 			const gitignoreContent = `
-				# Node modules
-				node_modules/
+# Node modules
+node_modules/
 				
-				# Logs
-				logs/
-				*.log
-				npm-debug.log*
+# Logs
+logs/
+*.log
+npm-debug.log*
 				
-				# .env files
-				.env
-				.env.local
-				.env.development.local
-				.env.test.local
-				.env.production.local
+# .env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 				
-				# OS files
-				.DS_Store
-				Thumbs.db
-				`;
+# OS files
+.DS_Store
+Thumbs.db `;
 
 			fs.writeFileSync(gitignorePath, gitignoreContent.trim());
 		}
