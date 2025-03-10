@@ -1,26 +1,19 @@
 import { Sequelize } from "sequelize";
-
-const MONGO_URI = process.env.MONGO_URI;
-
-import {
-  DB_DIALECT,
-  DB_HOST,
-  DB_NAME,
-  DB_PASS,
-  DB_USER,
-} from "../../data/constants/constants.js";
 import { models } from '../models/index.js';
 
-
 /**
- * Connect to MySQL with retry logic
+ * Configure Database
+ * nb:
+ * - if you face any issues with process.env, try to declare constant 
+ * - variables and place values by dotenv and export to use
  */
+
 export const db = new Sequelize({
-  database: DB_NAME,
-  username: DB_USER,
-  password: DB_PASS,
-  host: DB_HOST,
-  dialect: DB_DIALECT,
+  database: process.env.DB_NAME,
+  username: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  host: process.env.DB_HOST,
+  dialect: process.env.DB_DIALECT,
   logging: false,
   models: models,
 });
